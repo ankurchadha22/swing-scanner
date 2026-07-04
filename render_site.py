@@ -492,6 +492,11 @@ trend can’t be measured yet.</p>
 # ----------------------------------------------------------------------
 def write_site(payload: dict, docs_dir: str = DOCS_DIR) -> tuple[str, str, str]:
     os.makedirs(docs_dir, exist_ok=True)
+    # Serve these files verbatim: bypass GitHub Pages' default Jekyll build,
+    # which otherwise processes /docs and can fail on hand-written HTML.
+    # Written every run so it can never be dropped from the published folder.
+    with open(os.path.join(docs_dir, ".nojekyll"), "w") as f:
+        f.write("")
     html_path = os.path.join(docs_dir, "index.html")
     how_path = os.path.join(docs_dir, "how-it-works.html")
     json_path = os.path.join(docs_dir, "data.json")
