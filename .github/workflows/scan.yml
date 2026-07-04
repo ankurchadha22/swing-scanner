@@ -1,0 +1,43 @@
+name: Daily scan
+
+on:
+  schedule:
+    # weekdays 21:30 UTC (~5:30pm ET; drifts to 4:30pm ET in winter — still after the close)
+    - cron: "30 21 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scan and generate site
+        run: python render_site.py
+
+      - name: Commit generated site
+        run: |
+          git config user.name "swing-scan-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Daily scan $(date -u +%F)"
+            git push
+          fi

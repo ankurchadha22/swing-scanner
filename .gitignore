@@ -1,0 +1,12 @@
+# local environment / caches — never published
+.venv/
+.scan_cache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# local records (the site is generated into docs/ instead)
+scan_*.csv
+
+# local Claude Code permissions
+.claude/settings.local.json
