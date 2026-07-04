@@ -143,6 +143,12 @@ def main():
     check("explainer: teaches the 8/21 cross in plain English",
           'id="cross"' in x and "8-day average closes above" in x
           and "21-day average" in x)
+    check("explainer: reworded intro (not the on-the-nose framing)",
+          "assuming no trading background" not in x
+          and "explains every check and every term" not in x)
+    check("explainer: includes inline SVG chart diagrams",
+          x.count("<svg") >= 4 and "<figure>" in x and "<figcaption>" in x
+          and "8/21 bullish cross" in x)
     check("explainer: covers every step + verdicts + limits",
           all(f'id="{a}"' in x for a in
               ("averages", "regime", "stage", "stack", "cross",

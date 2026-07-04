@@ -229,6 +229,10 @@ tr.note td{padding:0 8px 10px;border-bottom:1px solid var(--hair);text-align:lef
 .prose table{font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
 .prose td{white-space:normal;text-align:left;font-size:14px}
 .prose td.k{font-weight:700;white-space:nowrap;vertical-align:top}
+figure{margin:22px 0 24px}
+figure svg{display:block;width:100%;height:auto;border:1px solid var(--hair);background:#fffdf8}
+figcaption{margin:9px 3px 0;font-size:13px;color:var(--muted);font-style:italic;
+  font-family:Georgia,"Times New Roman",serif;line-height:1.55;max-width:62ch}
 footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--hair);
   font-size:12.5px;color:var(--muted);line-height:1.6}
 @media (max-width:420px){
@@ -238,6 +242,85 @@ footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--hair);
   .regime h2{font-size:22px}
 }
 """
+
+
+# ----------------------------------------------------------------------
+# EXPLAINER CHARTS  (hand-drawn inline SVG — static, no external assets)
+# ----------------------------------------------------------------------
+_FF = "-apple-system,Segoe UI,Roboto,sans-serif"
+
+CHART_SMOOTH = f'''<figure>
+<svg viewBox="0 0 660 260" role="img" aria-label="A jagged daily price line with a smooth moving average drawn through it">
+  <line x1="44" y1="222" x2="560" y2="222" stroke="#ddd6c6" stroke-width="1"/>
+  <polyline fill="none" stroke="#cdc5b4" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"
+    points="44,200 82,182 120,192 158,166 196,180 234,156 272,166 310,138 348,150 386,120 424,132 462,98 500,110 538,84 555,76"/>
+  <polyline fill="none" stroke="#1c1812" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"
+    points="44,196 150,176 256,154 360,128 460,104 555,88"/>
+  <text x="562" y="72" font-family="{_FF}" font-size="13" fill="#8a8069">price</text>
+  <text x="562" y="92" font-family="{_FF}" font-size="13" fill="#1c1812" font-weight="700">average</text>
+</svg>
+<figcaption>A moving average (the smooth line) is simply the average of recent closing prices,
+redrawn each day — it reveals the trend beneath the day-to-day noise.</figcaption>
+</figure>'''
+
+CHART_CROSS = f'''<figure>
+<svg viewBox="0 0 660 300" role="img" aria-label="A fast 8-day average crossing up through a slower 21-day average">
+  <line x1="44" y1="234" x2="560" y2="234" stroke="#ddd6c6" stroke-width="1"/>
+  <line x1="360" y1="150" x2="360" y2="234" stroke="#8a5f14" stroke-width="1" stroke-dasharray="4 4"/>
+  <polyline fill="none" stroke="#cdc5b4" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"
+    points="44,200 82,184 120,194 158,176 196,190 234,168 272,180 310,152 348,164 386,130 424,142 462,110 500,120 538,88 560,78"/>
+  <polyline fill="none" stroke="#1c1812" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"
+    points="44,192 130,184 210,174 300,160 360,150 440,132 520,114 560,106"/>
+  <polyline fill="none" stroke="#1f6440" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"
+    points="44,202 110,209 182,204 252,188 312,166 360,150 432,120 520,86 560,72"/>
+  <circle cx="360" cy="150" r="5.5" fill="#f9f6ef" stroke="#1f6440" stroke-width="2.4"/>
+  <text x="352" y="130" text-anchor="end" font-family="{_FF}" font-size="13.5" fill="#1f6440" font-weight="700">8/21 bullish cross</text>
+  <text x="352" y="146" text-anchor="end" font-family="{_FF}" font-size="11.5" fill="#8a5f14">the entry trigger</text>
+  <text x="58" y="182" font-family="{_FF}" font-size="12" fill="#a99f88">price</text>
+  <text x="564" y="72" font-family="{_FF}" font-size="13" fill="#1f6440" font-weight="700">8-day</text>
+  <text x="564" y="106" font-family="{_FF}" font-size="13" fill="#1c1812" font-weight="700">21-day</text>
+</svg>
+<figcaption>When the fast 8-day average crosses above the slower 21-day average, the last
+week and a half of buying has overtaken the past month’s pace. That crossing — not the
+uptrend itself — is the signal the scanner waits for.</figcaption>
+</figure>'''
+
+CHART_STACK = f'''<figure>
+<svg viewBox="0 0 660 240" role="img" aria-label="Three rising averages stacked in order: 8-day above 21-day above 50-day">
+  <line x1="44" y1="206" x2="560" y2="206" stroke="#ddd6c6" stroke-width="1"/>
+  <polyline fill="none" stroke="#1f6440" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"
+    points="44,150 210,120 372,92 560,58"/>
+  <polyline fill="none" stroke="#1c1812" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"
+    points="44,168 210,142 372,116 560,84"/>
+  <polyline fill="none" stroke="#8a5f14" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"
+    points="44,186 210,164 372,142 560,112"/>
+  <text x="564" y="58" font-family="{_FF}" font-size="13" fill="#1f6440" font-weight="700">8-day</text>
+  <text x="564" y="84" font-family="{_FF}" font-size="13" fill="#1c1812" font-weight="700">21-day</text>
+  <text x="564" y="112" font-family="{_FF}" font-size="13" fill="#8a5f14" font-weight="700">50-day</text>
+</svg>
+<figcaption>“Stacked” means the three averages line up in order — 8 above 21 above 50 —
+and rise together. Short-, medium-, and longer-term momentum all point the same way.</figcaption>
+</figure>'''
+
+CHART_EXT = f'''<figure>
+<svg viewBox="0 0 660 240" role="img" aria-label="Price stretched far above its 21-day average, marked as snap-back risk">
+  <line x1="44" y1="206" x2="560" y2="206" stroke="#ddd6c6" stroke-width="1"/>
+  <polyline fill="none" stroke="#1c1812" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"
+    points="44,168 170,150 300,130 430,112 560,96"/>
+  <polyline fill="none" stroke="#1f6440" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"
+    points="44,172 170,150 300,126 400,104 470,74 520,50 560,38"/>
+  <line x1="512" y1="52" x2="512" y2="103" stroke="#8a5f14" stroke-width="1.4"/>
+  <line x1="506" y1="52" x2="518" y2="52" stroke="#8a5f14" stroke-width="1.4"/>
+  <line x1="506" y1="103" x2="518" y2="103" stroke="#8a5f14" stroke-width="1.4"/>
+  <text x="404" y="58" text-anchor="middle" font-family="{_FF}" font-size="13" fill="#8a5f14" font-weight="700">too far, too fast</text>
+  <text x="404" y="74" text-anchor="middle" font-family="{_FF}" font-size="11.5" fill="#8a5f14">snap-back risk</text>
+  <text x="564" y="42" font-family="{_FF}" font-size="13" fill="#1f6440" font-weight="700">price</text>
+  <text x="564" y="96" font-family="{_FF}" font-size="13" fill="#1c1812" font-weight="700">21-day</text>
+</svg>
+<figcaption>When price runs far above its 21-day average — like a stretched rubber band —
+it tends to snap back. Past 8% above the line, the scanner won’t call it a candidate no
+matter how good the rest looks.</figcaption>
+</figure>'''
 
 
 def _fmt_date(iso: str | None) -> str:
@@ -394,16 +477,17 @@ def render_html(p: dict) -> str:
 def render_explainer(generated: str) -> str:
     body = """
 <article class="prose">
-<p style="margin-top:30px">This page explains every check and every term on the scan,
-assuming no trading background. The scanner runs the same fixed checklist over roughly
-500 large U.S. stocks (the S&amp;P&nbsp;500 plus the Nasdaq-100) each evening, and
-surfaces the few names worth a human look. It predicts nothing — it filters.</p>
+<p style="margin-top:30px">The scanner runs the same fixed checklist over roughly 500 large
+U.S. stocks — the S&amp;P&nbsp;500 plus the Nasdaq-100 — every evening, and surfaces the
+handful worth a closer look. It predicts nothing; it filters. Here is what each step
+looks for, and why it matters.</p>
 
 <h2 id="averages">First, a 30-second primer on moving averages</h2>
 <p>A <span class="term">moving average</span> is just a stock’s average closing
 price over some number of recent trading days, redrawn each day. It smooths out daily
 noise so you can see the underlying direction. This system uses four of them as lenses
 of different lengths:</p>
+<!--CHART_SMOOTH-->
 <table><tbody>
 <tr><td class="k">8-day</td><td>about a week and a half of trading — the short-term pulse</td></tr>
 <tr><td class="k">21-day</td><td>about one trading month — the medium-term trend</td></tr>
@@ -434,6 +518,7 @@ single filter that removes most of the ~500 names on a typical day.</p>
 the intermediate one: 8-day above 21-day above 50-day. The scan calls that
 <span class="term">stacked</span> — short-, medium-, and intermediate-term momentum all
 pointing the same way. When they’re tangled, the trend is still sorting itself out.</p>
+<!--CHART_STACK-->
 
 <h2 id="cross"><span class="step">Step 4</span>The trigger: a fresh 8/21 cross</h2>
 <p>This is the signal the whole system waits for. When the 8-day average closes above
@@ -441,6 +526,7 @@ the 21-day average — an <span class="term">8/21 bullish cross</span> — it me
 last week-and-a-half of buying has overtaken the past month’s pace: short-term
 momentum has just turned up inside a bigger uptrend. That moment, not the uptrend
 itself, is the entry cue.</p>
+<!--CHART_CROSS-->
 <p>The cross must be <span class="term">fresh</span> — within the last 7 trading
 days. Older than that and the move has usually already run; you’d be arriving
 late to it. The <b>Trigger</b> column on the scan (“2d ago”) is simply how
@@ -462,6 +548,7 @@ line, the scan refuses to call it a candidate no matter how good everything else
 looks; beyond 5% it stays a candidate but carries a “don’t chase” note.
 The disciplined play on an extended name is to wait for it to come back to its
 averages, not to buy it stretched.</p>
+<!--CHART_EXT-->
 
 <h2 id="verdicts">What the verdicts mean</h2>
 <table><tbody>
@@ -484,6 +571,11 @@ than 200 trading days (recent IPOs and spin-offs) are excluded because their lon
 trend can’t be measured yet.</p>
 </article>
 """
+    body = (body
+            .replace("<!--CHART_SMOOTH-->", CHART_SMOOTH)
+            .replace("<!--CHART_CROSS-->", CHART_CROSS)
+            .replace("<!--CHART_STACK-->", CHART_STACK)
+            .replace("<!--CHART_EXT-->", CHART_EXT))
     return _page("Swing Scanner — how it works", "how", "", body, generated)
 
 
