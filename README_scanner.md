@@ -40,7 +40,7 @@ a phone-friendly "TODAY'S READ" page. `.github/workflows/scan.yml` regenerates
 it weekdays after the US close (21:30 UTC) and commits `docs/`; GitHub Pages
 serves the `/docs` folder. **The page contains no position-sizing or account
 data** — sizing stays local. QA for the renderer: `.venv/bin/python
-qa_render_site.py` (expects 19/19). See `PLAN_website.md` for the full spec.
+qa_render_site.py` (expects 29/29). See `PLAN_website.md` for the full spec.
 
 ## Position sizing helper
 ```python
