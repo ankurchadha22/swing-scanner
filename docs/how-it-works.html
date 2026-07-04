@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Swing Scanner — how it works</title>
+<meta name="description" content="A daily trend-following read of the S&amp;P 500 and Nasdaq-100.">
+<style>
+:root{
+  --paper:#f9f6ef; --ink:#1c1812; --body:#3d382e; --muted:#716b5d;
+  --hair:#ddd6c6; --green:#1f6440; --red:#9c2b20; --amber:#8a5f14;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:660px;margin:0 auto;padding:32px 18px 64px}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  font-variant-numeric:tabular-nums}
+a{color:inherit}
+/* masthead */
+.masthead h1{font-family:Georgia,"Times New Roman",serif;font-size:31px;margin:0;
+  font-weight:700;letter-spacing:-.015em}
+.tagline{margin:2px 0 12px;font-size:14.5px;color:var(--muted);
+  font-family:Georgia,serif;font-style:italic}
+.double{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);
+  height:6px;margin-bottom:12px}
+nav{display:flex;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:.14em}
+nav a{color:var(--muted);text-decoration:none;padding-bottom:3px}
+nav a.active{color:var(--ink);font-weight:700;border-bottom:2px solid var(--ink)}
+nav a:hover{color:var(--ink)}
+.dateline{margin:18px 0 0;font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.dateline b{color:var(--ink);font-weight:700}
+/* regime lede — typographic, not a card */
+.regime{margin:30px 0 0}
+.regime .bar{width:54px;height:4px;margin-bottom:12px}
+.regime.on .bar{background:var(--green)}
+.regime.off .bar{background:var(--red)}
+.regime.unknown .bar{background:var(--amber)}
+.regime h2{font-family:Georgia,serif;font-size:25px;line-height:1.25;margin:0;font-weight:700}
+.regime.on h2{color:var(--green)}
+.regime.off h2{color:var(--red)}
+.regime.unknown h2{color:var(--amber)}
+.regime .dek{margin:8px 0 0;font-size:15.5px;color:var(--body);max-width:56ch}
+.regime .dek a{color:var(--muted)}
+/* coverage */
+.coverage{margin:20px 0 0;font-size:13px;color:var(--muted);line-height:1.55}
+/* incomplete warning — newspaper correction box */
+.warn{margin:22px 0 0;border-top:3px solid var(--red);border-bottom:1px solid var(--red);
+  padding:10px 0;color:var(--red);font-weight:700;font-size:14.5px}
+/* section kickers */
+.kicker{display:flex;align-items:baseline;gap:12px;margin:40px 0 4px}
+.kicker h3{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.kicker .n{color:var(--muted);font-weight:400}
+.kicker::after{content:"";flex:1;border-top:1px solid var(--hair);transform:translateY(-3px)}
+.intro{margin:6px 0 14px;font-size:14.5px;color:var(--body);
+  font-family:Georgia,serif;font-style:italic;max-width:60ch}
+/* tables */
+table{width:100%;border-collapse:collapse}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  font-weight:700;text-align:right;padding:6px 8px;border-bottom:2px solid var(--ink)}
+th.l{text-align:left}
+td{padding:10px 8px;border-bottom:1px solid var(--hair);text-align:right;
+  font-size:15px;white-space:nowrap;vertical-align:top}
+td.l{text-align:left}
+td.sym{font-weight:700}
+td .raw{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+tr.has-note td{border-bottom:none;padding-bottom:2px}
+tr.note td{padding:0 8px 10px;border-bottom:1px solid var(--hair);text-align:left;
+  font-size:13.5px;color:var(--amber);white-space:normal;
+  font-family:Georgia,serif;font-style:italic}
+.soft td{font-size:14px;color:var(--body)}
+.soft td.flaw{white-space:normal;color:var(--muted);font-size:13px}
+/* column legend */
+.legend{margin:12px 0 0;font-size:12.5px;color:var(--muted);line-height:1.6;max-width:62ch}
+.legend b{color:var(--body);font-weight:700}
+/* empty state */
+.empty{margin:14px 0 0;padding:22px 0;text-align:center;color:var(--muted);
+  font-family:Georgia,serif;font-style:italic;font-size:15.5px;
+  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+/* explainer prose */
+.prose{font-family:Georgia,"Times New Roman",serif;font-size:16.5px;color:var(--body)}
+.prose h2{font-size:21px;color:var(--ink);margin:38px 0 8px;line-height:1.3}
+.prose h2 .step{display:block;font-family:-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  font-weight:700;margin-bottom:4px}
+.prose p{margin:0 0 14px;max-width:64ch}
+.prose .term{font-style:italic}
+.prose table{font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+.prose td{white-space:normal;text-align:left;font-size:14px}
+.prose td.k{font-weight:700;white-space:nowrap;vertical-align:top}
+footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--hair);
+  font-size:12.5px;color:var(--muted);line-height:1.6}
+@media (max-width:420px){
+  .wrap{padding:24px 13px 52px}
+  td,th{padding-left:5px;padding-right:5px}
+  td{font-size:14px}
+  .regime h2{font-size:22px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <h1>Swing Scanner</h1>
+  <p class="tagline">A daily trend-following read of the S&amp;P&nbsp;500 and Nasdaq-100</p>
+  <div class="double"></div>
+  <nav><a href="index.html">Today’s scan</a><a href="how-it-works.html" class="active">How it works</a></nav>
+  
+</header>
+
+<article class="prose">
+<p style="margin-top:30px">This page explains every check and every term on the scan,
+assuming no trading background. The scanner runs the same fixed checklist over roughly
+500 large U.S. stocks (the S&amp;P&nbsp;500 plus the Nasdaq-100) each evening, and
+surfaces the few names worth a human look. It predicts nothing — it filters.</p>
+
+<h2 id="averages">First, a 30-second primer on moving averages</h2>
+<p>A <span class="term">moving average</span> is just a stock’s average closing
+price over some number of recent trading days, redrawn each day. It smooths out daily
+noise so you can see the underlying direction. This system uses four of them as lenses
+of different lengths:</p>
+<table><tbody>
+<tr><td class="k">8-day</td><td>about a week and a half of trading — the short-term pulse</td></tr>
+<tr><td class="k">21-day</td><td>about one trading month — the medium-term trend</td></tr>
+<tr><td class="k">50-day</td><td>about one quarter — the intermediate trend</td></tr>
+<tr><td class="k">200-day</td><td>almost a full trading year — the long-term tide</td></tr>
+</tbody></table>
+<p style="margin-top:12px">The 8-, 21-, and 50-day lenses are <span class="term">exponential</span>
+moving averages (EMAs), which weight recent days a bit more heavily; the 200-day is a
+simple average. The distinction barely matters for reading the scan — think of them all
+as trend lines of different speeds.</p>
+
+<h2 id="regime"><span class="step">Step 1</span>Is the tide coming in? (market regime)</h2>
+<p>Before looking at any single stock, the scanner checks the whole market: is SPY
+(a fund tracking the S&amp;P&nbsp;500) trading <em>above</em> its 200-day average, and
+is that average itself <em>rising</em>? Most stocks follow the market’s tide, so
+buying individual uptrends while the broad market is falling fails far more often.
+When this gate is red — <span class="term">risk-off</span> — the whole page becomes
+watch-only, no matter how good an individual chart looks.</p>
+
+<h2 id="stage"><span class="step">Step 2</span>Is the stock itself in a long-term uptrend?</h2>
+<p>The same test applied to each stock: price above its own rising 200-day average.
+A stock below that line, or with the line still falling, is in a downtrend or still
+repairing one — it fails the scan outright, whatever else is happening. This is the
+single filter that removes most of the ~500 names on a typical day.</p>
+
+<h2 id="stack"><span class="step">Step 3</span>Do the three lenses agree? (the trend stack)</h2>
+<p>In a healthy uptrend the short lens sits above the medium lens, which sits above
+the intermediate one: 8-day above 21-day above 50-day. The scan calls that
+<span class="term">stacked</span> — short-, medium-, and intermediate-term momentum all
+pointing the same way. When they’re tangled, the trend is still sorting itself out.</p>
+
+<h2 id="cross"><span class="step">Step 4</span>The trigger: a fresh 8/21 cross</h2>
+<p>This is the signal the whole system waits for. When the 8-day average closes above
+the 21-day average — an <span class="term">8/21 bullish cross</span> — it means the
+last week-and-a-half of buying has overtaken the past month’s pace: short-term
+momentum has just turned up inside a bigger uptrend. That moment, not the uptrend
+itself, is the entry cue.</p>
+<p>The cross must be <span class="term">fresh</span> — within the last 7 trading
+days. Older than that and the move has usually already run; you’d be arriving
+late to it. The <b>Trigger</b> column on the scan (“2d ago”) is simply how
+many trading days have passed since that cross.</p>
+
+<h2 id="volume"><span class="step">Step 5</span>Is there conviction behind it? (volume)</h2>
+<p><span class="term">Volume</span> is how much of the stock actually traded. The scan
+compares the last five days’ average volume with the stock’s own 50-day norm:
+1.50× means trading has been half again busier than usual — real participation
+behind the move. Below 1.00× the move happened on light traffic, which fizzles
+more easily; that alone demotes a name to “soft.” The small number underneath
+(“2.1M/day”) is the raw average traded per day, useful for judging how easily
+a stock trades.</p>
+
+<h2 id="extension"><span class="step">Step 6</span>Don’t chase (the extension guard)</h2>
+<p>A stock stretched far above its 21-day average is like a stretched rubber band —
+it tends to snap back before continuing. If price is more than 8% above the 21-day
+line, the scan refuses to call it a candidate no matter how good everything else
+looks; beyond 5% it stays a candidate but carries a “don’t chase” note.
+The disciplined play on an extended name is to wait for it to come back to its
+averages, not to buy it stretched.</p>
+
+<h2 id="verdicts">What the verdicts mean</h2>
+<table><tbody>
+<tr><td class="k">Candidate</td><td>passed every check. Worth opening the real chart
+to judge an entry — that judgment stays with the human.</td></tr>
+<tr><td class="k">Soft candidate</td><td>the trigger fired, but one box is unchecked —
+the stack isn’t aligned or volume is below normal. Lower conviction.</td></tr>
+<tr><td class="k">Watch</td><td>healthy uptrend, but no fresh trigger (or too extended
+to buy). Wait for the next pullback or cross. Not listed on the front page.</td></tr>
+<tr><td class="k">Fail</td><td>not in a long-term uptrend (steps 1–2). Skipped
+regardless of anything else. Not listed.</td></tr>
+</tbody></table>
+
+<h2 id="limits">What this is not</h2>
+<p>This is a screening aid built on end-of-day data — not financial advice, not a
+prediction, and never an automatic trade. It exists to replace scrolling and hype with
+a fixed, repeatable checklist. A candidate here is an invitation to look at the actual
+chart and decide for yourself; plenty of candidates deserve a pass. Stocks listed less
+than 200 trading days (recent IPOs and spin-offs) are excluded because their long-term
+trend can’t be measured yet.</p>
+</article>
+
+<footer>
+  <p>Screening aid, not financial advice. A candidate is the <em>start</em> of your own
+  chart analysis — entry, stop, and judgment are yours — not a buy signal or a
+  recommendation to trade.</p>
+  <p>Generated 2026-07-04 23:05 UTC · updates weekdays after the US close ·
+  <a href="data.json">raw data (JSON)</a></p>
+</footer>
+</div>
+</body>
+</html>
