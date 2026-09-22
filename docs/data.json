@@ -1,6 +1,6 @@
 {
  "as_of": "2026-09-18",
- "generated_utc": "2026-09-18 23:32 UTC",
+ "generated_utc": "2026-09-22 00:14 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
@@ -16,18 +16,18 @@
   "incomplete": false
  },
  "counts": {
-  "candidates": 14,
+  "candidates": 15,
   "soft": 15,
-  "watch": 217,
-  "fail": 255
+  "watch": 219,
+  "fail": 252
  },
  "candidates": [
   {
    "symbol": "DXCM",
    "price": 89.35,
    "days_since_cross": 0,
-   "rvol": 1.24,
-   "avg_volume": 5893131,
+   "rvol": 1.25,
+   "avg_volume": 5903120,
    "avg_volume_fmt": "5.9M",
    "extension_pct": 2.7,
    "watch_for": null
@@ -37,7 +37,7 @@
    "price": 158.19,
    "days_since_cross": 0,
    "rvol": 1.01,
-   "avg_volume": 4106002,
+   "avg_volume": 4111760,
    "avg_volume_fmt": "4.1M",
    "extension_pct": 0.1,
    "watch_for": null
@@ -47,17 +47,27 @@
    "price": 125.31,
    "days_since_cross": 1,
    "rvol": 1.19,
-   "avg_volume": 1905587,
+   "avg_volume": 1906960,
    "avg_volume_fmt": "1.9M",
    "extension_pct": 0.6,
    "watch_for": null
+  },
+  {
+   "symbol": "P",
+   "price": 104.14,
+   "days_since_cross": 1,
+   "rvol": 3.92,
+   "avg_volume": 17054380,
+   "avg_volume_fmt": "17.1M",
+   "extension_pct": 5.5,
+   "watch_for": "already +5.5% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
   },
   {
    "symbol": "A",
    "price": 156.47,
    "days_since_cross": 2,
    "rvol": 1.25,
-   "avg_volume": 2715714,
+   "avg_volume": 2715720,
    "avg_volume_fmt": "2.7M",
    "extension_pct": 4.0,
    "watch_for": null
@@ -67,7 +77,7 @@
    "price": 246.45,
    "days_since_cross": 3,
    "rvol": 1.24,
-   "avg_volume": 1242228,
+   "avg_volume": 1242240,
    "avg_volume_fmt": "1.2M",
    "extension_pct": 2.6,
    "watch_for": null
@@ -77,7 +87,7 @@
    "price": 363.58,
    "days_since_cross": 3,
    "rvol": 1.39,
-   "avg_volume": 8761652,
+   "avg_volume": 8765500,
    "avg_volume_fmt": "8.8M",
    "extension_pct": 1.8,
    "watch_for": null
@@ -87,7 +97,7 @@
    "price": 282.23,
    "days_since_cross": 4,
    "rvol": 1.39,
-   "avg_volume": 497994,
+   "avg_volume": 498000,
    "avg_volume_fmt": "498K",
    "extension_pct": -0.3,
    "watch_for": null
@@ -97,7 +107,7 @@
    "price": 53.3,
    "days_since_cross": 4,
    "rvol": 1.35,
-   "avg_volume": 2585789,
+   "avg_volume": 2585980,
    "avg_volume_fmt": "2.6M",
    "extension_pct": 2.3,
    "watch_for": null
@@ -106,8 +116,8 @@
    "symbol": "BDX",
    "price": 180.94,
    "days_since_cross": 4,
-   "rvol": 1.48,
-   "avg_volume": 2706270,
+   "rvol": 1.49,
+   "avg_volume": 2742020,
    "avg_volume_fmt": "2.7M",
    "extension_pct": -0.4,
    "watch_for": null
@@ -117,7 +127,7 @@
    "price": 169.84,
    "days_since_cross": 4,
    "rvol": 1.31,
-   "avg_volume": 6486656,
+   "avg_volume": 6486820,
    "avg_volume_fmt": "6.5M",
    "extension_pct": 3.9,
    "watch_for": null
@@ -127,8 +137,8 @@
    "price": 88.25,
    "days_since_cross": 4,
    "rvol": 1.12,
-   "avg_volume": 17715653,
-   "avg_volume_fmt": "17.7M",
+   "avg_volume": 17773960,
+   "avg_volume_fmt": "17.8M",
    "extension_pct": 0.3,
    "watch_for": null
   },
@@ -136,9 +146,9 @@
    "symbol": "WST",
    "price": 362.31,
    "days_since_cross": 4,
-   "rvol": 1.29,
-   "avg_volume": 830009,
-   "avg_volume_fmt": "830K",
+   "rvol": 1.3,
+   "avg_volume": 831020,
+   "avg_volume_fmt": "831K",
    "extension_pct": 3.2,
    "watch_for": null
   },
@@ -147,7 +157,7 @@
    "price": 432.03,
    "days_since_cross": 5,
    "rvol": 1.22,
-   "avg_volume": 733227,
+   "avg_volume": 733240,
    "avg_volume_fmt": "733K",
    "extension_pct": 5.6,
    "watch_for": "already +5.6% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
@@ -157,7 +167,7 @@
    "price": 197.79,
    "days_since_cross": 5,
    "rvol": 1.04,
-   "avg_volume": 2614531,
+   "avg_volume": 2617240,
    "avg_volume_fmt": "2.6M",
    "extension_pct": 4.0,
    "watch_for": null
@@ -169,7 +179,7 @@
    "price": 344.41,
    "days_since_cross": 0,
    "rvol": 1.08,
-   "avg_volume": 19603378,
+   "avg_volume": 19615080,
    "avg_volume_fmt": "19.6M",
    "extension_pct": 1.3,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -179,7 +189,7 @@
    "price": 335.0,
    "days_since_cross": 0,
    "rvol": 1.12,
-   "avg_volume": 1426249,
+   "avg_volume": 1426280,
    "avg_volume_fmt": "1.4M",
    "extension_pct": 2.5,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -189,8 +199,8 @@
    "price": 222.27,
    "days_since_cross": 0,
    "rvol": 0.96,
-   "avg_volume": 119975268,
-   "avg_volume_fmt": "120.0M",
+   "avg_volume": 120153060,
+   "avg_volume_fmt": "120.2M",
    "extension_pct": 1.8,
    "unchecked": "volume below normal (0.96\u00d7)"
   },
@@ -199,7 +209,7 @@
    "price": 82.2,
    "days_since_cross": 1,
    "rvol": 1.46,
-   "avg_volume": 9650243,
+   "avg_volume": 9650920,
    "avg_volume_fmt": "9.7M",
    "extension_pct": -3.8,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -209,7 +219,7 @@
    "price": 349.54,
    "days_since_cross": 1,
    "rvol": 1.05,
-   "avg_volume": 28692148,
+   "avg_volume": 28705480,
    "avg_volume_fmt": "28.7M",
    "extension_pct": 1.9,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -219,9 +229,9 @@
    "price": 82.96,
    "days_since_cross": 1,
    "rvol": 1.21,
-   "avg_volume": 1988858,
+   "avg_volume": 1994000,
    "avg_volume_fmt": "2.0M",
-   "extension_pct": -1.8,
+   "extension_pct": -1.3,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
@@ -229,7 +239,7 @@
    "price": 183.86,
    "days_since_cross": 2,
    "rvol": 1.33,
-   "avg_volume": 1099577,
+   "avg_volume": 1099580,
    "avg_volume_fmt": "1.1M",
    "extension_pct": -0.9,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -239,7 +249,7 @@
    "price": 271.22,
    "days_since_cross": 3,
    "rvol": 1.33,
-   "avg_volume": 3099834,
+   "avg_volume": 3100840,
    "avg_volume_fmt": "3.1M",
    "extension_pct": -0.6,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -249,7 +259,7 @@
    "price": 146.39,
    "days_since_cross": 3,
    "rvol": 1.01,
-   "avg_volume": 8806183,
+   "avg_volume": 8824200,
    "avg_volume_fmt": "8.8M",
    "extension_pct": 0.4,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -258,18 +268,18 @@
    "symbol": "ABBV",
    "price": 263.96,
    "days_since_cross": 4,
-   "rvol": 0.98,
-   "avg_volume": 4851419,
+   "rvol": 0.99,
+   "avg_volume": 4883900,
    "avg_volume_fmt": "4.9M",
    "extension_pct": 2.0,
-   "unchecked": "volume below normal (0.98\u00d7)"
+   "unchecked": "volume below normal (0.99\u00d7)"
   },
   {
    "symbol": "EBAY",
    "price": 111.84,
    "days_since_cross": 4,
-   "rvol": 1.7,
-   "avg_volume": 7982302,
+   "rvol": 1.71,
+   "avg_volume": 8024380,
    "avg_volume_fmt": "8.0M",
    "extension_pct": 4.2,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -278,18 +288,18 @@
    "symbol": "PM",
    "price": 188.62,
    "days_since_cross": 4,
-   "rvol": 0.88,
-   "avg_volume": 4071333,
-   "avg_volume_fmt": "4.1M",
+   "rvol": 0.9,
+   "avg_volume": 4171800,
+   "avg_volume_fmt": "4.2M",
    "extension_pct": -0.5,
-   "unchecked": "volume below normal (0.88\u00d7)"
+   "unchecked": "volume below normal (0.90\u00d7)"
   },
   {
    "symbol": "VTRS",
    "price": 16.95,
    "days_since_cross": 4,
    "rvol": 0.98,
-   "avg_volume": 9036177,
+   "avg_volume": 9036180,
    "avg_volume_fmt": "9.0M",
    "extension_pct": 1.4,
    "unchecked": "volume below normal (0.98\u00d7)"
@@ -298,8 +308,8 @@
    "symbol": "JPM",
    "price": 349.67,
    "days_since_cross": 5,
-   "rvol": 1.59,
-   "avg_volume": 11332358,
+   "rvol": 1.6,
+   "avg_volume": 11342060,
    "avg_volume_fmt": "11.3M",
    "extension_pct": -1.1,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
@@ -309,7 +319,7 @@
    "price": 374.62,
    "days_since_cross": 5,
    "rvol": 0.96,
-   "avg_volume": 1740929,
+   "avg_volume": 1743100,
    "avg_volume_fmt": "1.7M",
    "extension_pct": 0.8,
    "unchecked": "volume below normal (0.96\u00d7)"
