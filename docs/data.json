@@ -1,26 +1,27 @@
 {
  "as_of": "2026-10-06",
- "generated_utc": "2026-10-07 00:57 UTC",
+ "generated_utc": "2026-10-08 01:13 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
   "slope_pct": 0.7
  },
  "coverage": {
-  "evaluated": 500,
+  "evaluated": 499,
   "universe": 503,
   "skipped": [
    "FDXF",
    "HONA",
-   "PSKY"
+   "PSKY",
+   "WBD"
   ],
   "incomplete": false
  },
  "counts": {
   "candidates": 3,
-  "soft": 29,
-  "watch": 190,
-  "fail": 278
+  "soft": 28,
+  "watch": 191,
+  "fail": 277
  },
  "candidates": [
   {
@@ -86,16 +87,6 @@
    "unchecked": "volume below normal (0.99\u00d7)"
   },
   {
-   "symbol": "GOOG",
-   "price": 343.83,
-   "days_since_cross": 0,
-   "rvol": 1.02,
-   "avg_volume": 17953500,
-   "avg_volume_fmt": "18.0M",
-   "extension_pct": 1.1,
-   "unchecked": "trend stack not aligned (8 > 21 > 50)"
-  },
-  {
    "symbol": "HAS",
    "price": 91.03,
    "days_since_cross": 0,
@@ -140,18 +131,28 @@
    "price": 117.94,
    "days_since_cross": 1,
    "rvol": 0.89,
-   "avg_volume": 17363420,
+   "avg_volume": 17366680,
    "avg_volume_fmt": "17.4M",
    "extension_pct": 7.3,
    "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.89\u00d7)"
   },
   {
+   "symbol": "GOOG",
+   "price": 344.59,
+   "days_since_cross": 1,
+   "rvol": 1.02,
+   "avg_volume": 17788520,
+   "avg_volume_fmt": "17.8M",
+   "extension_pct": 1.2,
+   "unchecked": "trend stack not aligned (8 > 21 > 50)"
+  },
+  {
    "symbol": "GOOGL",
    "price": 347.68,
    "days_since_cross": 1,
-   "rvol": 1.05,
-   "avg_volume": 27688080,
-   "avg_volume_fmt": "27.7M",
+   "rvol": 1.06,
+   "avg_volume": 27752260,
+   "avg_volume_fmt": "27.8M",
    "extension_pct": 1.1,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
@@ -240,20 +241,10 @@
    "price": 411.04,
    "days_since_cross": 3,
    "rvol": 1.6,
-   "avg_volume": 12638000,
+   "avg_volume": 12646380,
    "avg_volume_fmt": "12.6M",
    "extension_pct": -8.0,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
-  },
-  {
-   "symbol": "HLT",
-   "price": 316.12,
-   "days_since_cross": 4,
-   "rvol": 0.74,
-   "avg_volume": 1364720,
-   "avg_volume_fmt": "1.4M",
-   "extension_pct": 0.5,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.74\u00d7)"
   },
   {
    "symbol": "HST",
@@ -266,16 +257,6 @@
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
-   "symbol": "Q",
-   "price": 131.53,
-   "days_since_cross": 4,
-   "rvol": 0.75,
-   "avg_volume": 1318860,
-   "avg_volume_fmt": "1.3M",
-   "extension_pct": 4.9,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.75\u00d7)"
-  },
-  {
    "symbol": "XOM",
    "price": 164.48,
    "days_since_cross": 4,
@@ -286,14 +267,24 @@
    "unchecked": "volume below normal (0.83\u00d7)"
   },
   {
-   "symbol": "SOLV",
-   "price": 88.03,
+   "symbol": "HLT",
+   "price": 322.61,
    "days_since_cross": 5,
-   "rvol": 0.8,
-   "avg_volume": 849480,
-   "avg_volume_fmt": "849K",
-   "extension_pct": -0.7,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.80\u00d7)"
+   "rvol": 0.73,
+   "avg_volume": 1342020,
+   "avg_volume_fmt": "1.3M",
+   "extension_pct": 2.3,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.73\u00d7)"
+  },
+  {
+   "symbol": "Q",
+   "price": 133.63,
+   "days_since_cross": 5,
+   "rvol": 0.82,
+   "avg_volume": 1440420,
+   "avg_volume_fmt": "1.4M",
+   "extension_pct": 6.0,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.82\u00d7)"
   },
   {
    "symbol": "TT",
@@ -326,16 +317,6 @@
    "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.82\u00d7)"
   },
   {
-   "symbol": "GEV",
-   "price": 990.0,
-   "days_since_cross": 6,
-   "rvol": 0.91,
-   "avg_volume": 2002760,
-   "avg_volume_fmt": "2.0M",
-   "extension_pct": 3.4,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.91\u00d7)"
-  },
-  {
    "symbol": "JBL",
    "price": 309.19,
    "days_since_cross": 6,
@@ -344,6 +325,16 @@
    "avg_volume_fmt": "2.2M",
    "extension_pct": 0.7,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
+  },
+  {
+   "symbol": "SOLV",
+   "price": 87.04,
+   "days_since_cross": 6,
+   "rvol": 0.81,
+   "avg_volume": 862560,
+   "avg_volume_fmt": "863K",
+   "extension_pct": -1.7,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.81\u00d7)"
   }
  ]
 }
