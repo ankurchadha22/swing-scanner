@@ -1,6 +1,6 @@
 {
  "as_of": "2026-10-12",
- "generated_utc": "2026-10-13 02:41 UTC",
+ "generated_utc": "2026-10-14 00:31 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
@@ -140,7 +140,7 @@
    "price": 89.79,
    "days_since_cross": 0,
    "rvol": 0.92,
-   "avg_volume": 13934460,
+   "avg_volume": 13936540,
    "avg_volume_fmt": "13.9M",
    "extension_pct": 2.7,
    "unchecked": "volume below normal (0.92\u00d7)"
@@ -250,7 +250,7 @@
    "price": 28.4,
    "days_since_cross": 1,
    "rvol": 0.81,
-   "avg_volume": 28295640,
+   "avg_volume": 28297920,
    "avg_volume_fmt": "28.3M",
    "extension_pct": 1.4,
    "unchecked": "volume below normal (0.81\u00d7)"
@@ -410,7 +410,7 @@
    "price": 259.53,
    "days_since_cross": 3,
    "rvol": 0.94,
-   "avg_volume": 34058280,
+   "avg_volume": 34068880,
    "avg_volume_fmt": "34.1M",
    "extension_pct": 2.0,
    "unchecked": "volume below normal (0.94\u00d7)"
@@ -530,7 +530,7 @@
    "price": 348.97,
    "days_since_cross": 5,
    "rvol": 0.74,
-   "avg_volume": 12297180,
+   "avg_volume": 12301240,
    "avg_volume_fmt": "12.3M",
    "extension_pct": 1.8,
    "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.74\u00d7)"
@@ -540,7 +540,7 @@
    "price": 352.72,
    "days_since_cross": 5,
    "rvol": 0.79,
-   "avg_volume": 19891700,
+   "avg_volume": 19899240,
    "avg_volume_fmt": "19.9M",
    "extension_pct": 1.9,
    "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.79\u00d7)"
