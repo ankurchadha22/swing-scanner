@@ -1,26 +1,27 @@
 {
  "as_of": "2026-11-02",
- "generated_utc": "2026-11-03 03:01 UTC",
+ "generated_utc": "2026-11-04 01:36 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
   "slope_pct": 0.6
  },
  "coverage": {
-  "evaluated": 500,
+  "evaluated": 499,
   "universe": 503,
   "skipped": [
    "FDXF",
    "HONA",
+   "KVUE",
    "VYLR"
   ],
   "incomplete": false
  },
  "counts": {
   "candidates": 6,
-  "soft": 27,
-  "watch": 220,
-  "fail": 247
+  "soft": 26,
+  "watch": 219,
+  "fail": 248
  },
  "candidates": [
   {
@@ -28,7 +29,7 @@
    "price": 148.36,
    "days_since_cross": 1,
    "rvol": 1.04,
-   "avg_volume": 10432600,
+   "avg_volume": 10436360,
    "avg_volume_fmt": "10.4M",
    "extension_pct": 2.0,
    "watch_for": null
@@ -78,7 +79,7 @@
    "price": 270.56,
    "days_since_cross": 5,
    "rvol": 1.01,
-   "avg_volume": 7080580,
+   "avg_volume": 7084520,
    "avg_volume_fmt": "7.1M",
    "extension_pct": 2.1,
    "watch_for": null
@@ -190,7 +191,7 @@
    "price": 340.58,
    "days_since_cross": 2,
    "rvol": 0.82,
-   "avg_volume": 5927120,
+   "avg_volume": 5931740,
    "avg_volume_fmt": "5.9M",
    "extension_pct": 1.0,
    "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.82\u00d7)"
@@ -280,20 +281,10 @@
    "price": 241.81,
    "days_since_cross": 4,
    "rvol": 0.88,
-   "avg_volume": 9206300,
+   "avg_volume": 9210580,
    "avg_volume_fmt": "9.2M",
    "extension_pct": -3.9,
    "unchecked": "volume below normal (0.88\u00d7)"
-  },
-  {
-   "symbol": "FRT",
-   "price": 111.37,
-   "days_since_cross": 4,
-   "rvol": 1.37,
-   "avg_volume": 1265640,
-   "avg_volume_fmt": "1.3M",
-   "extension_pct": 2.5,
-   "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
    "symbol": "P",
@@ -340,7 +331,7 @@
    "price": 52.31,
    "days_since_cross": 6,
    "rvol": 0.91,
-   "avg_volume": 12224140,
+   "avg_volume": 12226160,
    "avg_volume_fmt": "12.2M",
    "extension_pct": 1.3,
    "unchecked": "volume below normal (0.91\u00d7)"
