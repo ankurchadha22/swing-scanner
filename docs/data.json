@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-09",
- "generated_utc": "2026-11-10 03:44 UTC",
+ "generated_utc": "2026-11-11 01:24 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
@@ -48,7 +48,7 @@
    "price": 266.93,
    "days_since_cross": 2,
    "rvol": 1.53,
-   "avg_volume": 62160680,
+   "avg_volume": 62181440,
    "avg_volume_fmt": "62.2M",
    "extension_pct": 4.6,
    "watch_for": null
@@ -68,7 +68,7 @@
    "price": 545.18,
    "days_since_cross": 3,
    "rvol": 1.44,
-   "avg_volume": 33115580,
+   "avg_volume": 33123940,
    "avg_volume_fmt": "33.1M",
    "extension_pct": 3.0,
    "watch_for": null
