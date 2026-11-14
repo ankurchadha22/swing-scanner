@@ -1,6 +1,6 @@
 {
- "as_of": "2026-11-11",
- "generated_utc": "2026-11-13 02:03 UTC",
+ "as_of": "2026-11-13",
+ "generated_utc": "2026-11-14 01:39 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
@@ -17,263 +17,153 @@
   "incomplete": false
  },
  "counts": {
-  "candidates": 11,
-  "soft": 14,
-  "watch": 245,
-  "fail": 230
+  "candidates": 4,
+  "soft": 10,
+  "watch": 260,
+  "fail": 226
  },
  "candidates": [
   {
-   "symbol": "IEX",
-   "price": 239.96,
-   "days_since_cross": 1,
-   "rvol": 1.06,
-   "avg_volume": 749720,
-   "avg_volume_fmt": "750K",
-   "extension_pct": 2.7,
-   "watch_for": null
-  },
-  {
-   "symbol": "GRMN",
-   "price": 293.93,
-   "days_since_cross": 3,
-   "rvol": 1.02,
-   "avg_volume": 886000,
-   "avg_volume_fmt": "886K",
-   "extension_pct": 3.2,
-   "watch_for": null
-  },
-  {
-   "symbol": "SOLV",
-   "price": 88.62,
-   "days_since_cross": 3,
-   "rvol": 1.55,
-   "avg_volume": 1662980,
-   "avg_volume_fmt": "1.7M",
-   "extension_pct": 1.7,
-   "watch_for": null
-  },
-  {
-   "symbol": "AMZN",
-   "price": 266.17,
-   "days_since_cross": 4,
-   "rvol": 1.26,
-   "avg_volume": 51360620,
-   "avg_volume_fmt": "51.4M",
-   "extension_pct": 3.4,
-   "watch_for": null
-  },
-  {
-   "symbol": "HSIC",
-   "price": 88.42,
-   "days_since_cross": 5,
-   "rvol": 1.07,
-   "avg_volume": 1444340,
-   "avg_volume_fmt": "1.4M",
-   "extension_pct": 2.6,
-   "watch_for": null
-  },
-  {
-   "symbol": "MSFT",
-   "price": 521.13,
-   "days_since_cross": 5,
-   "rvol": 1.3,
-   "avg_volume": 30163880,
-   "avg_volume_fmt": "30.2M",
-   "extension_pct": -1.5,
-   "watch_for": null
-  },
-  {
-   "symbol": "ROST",
-   "price": 241.27,
-   "days_since_cross": 5,
-   "rvol": 1.03,
-   "avg_volume": 2128460,
-   "avg_volume_fmt": "2.1M",
+   "symbol": "EOG",
+   "price": 158.32,
+   "days_since_cross": 0,
+   "rvol": 1.2,
+   "avg_volume": 3806380,
+   "avg_volume_fmt": "3.8M",
    "extension_pct": 3.0,
    "watch_for": null
   },
   {
-   "symbol": "TGT",
-   "price": 162.7,
-   "days_since_cross": 5,
-   "rvol": 1.06,
-   "avg_volume": 3915240,
-   "avg_volume_fmt": "3.9M",
-   "extension_pct": 4.0,
+   "symbol": "MPWR",
+   "price": 1390.54,
+   "days_since_cross": 3,
+   "rvol": 1.2,
+   "avg_volume": 1072040,
+   "avg_volume_fmt": "1.1M",
+   "extension_pct": 6.5,
+   "watch_for": "already +6.5% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
+  },
+  {
+   "symbol": "SOLV",
+   "price": 88.81,
+   "days_since_cross": 4,
+   "rvol": 1.38,
+   "avg_volume": 1489760,
+   "avg_volume_fmt": "1.5M",
+   "extension_pct": 1.8,
    "watch_for": null
   },
   {
    "symbol": "XYZ",
-   "price": 85.72,
-   "days_since_cross": 5,
-   "rvol": 1.41,
-   "avg_volume": 7053140,
-   "avg_volume_fmt": "7.1M",
-   "extension_pct": 6.1,
-   "watch_for": "already +6.1% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
-  },
-  {
-   "symbol": "UAL",
-   "price": 118.37,
+   "price": 82.26,
    "days_since_cross": 6,
    "rvol": 1.2,
-   "avg_volume": 5683340,
-   "avg_volume_fmt": "5.7M",
-   "extension_pct": 7.7,
-   "watch_for": "already +7.7% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
-  },
-  {
-   "symbol": "WAB",
-   "price": 304.18,
-   "days_since_cross": 6,
-   "rvol": 1.23,
-   "avg_volume": 1136460,
-   "avg_volume_fmt": "1.1M",
-   "extension_pct": 5.3,
-   "watch_for": "already +5.3% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
+   "avg_volume": 5977140,
+   "avg_volume_fmt": "6.0M",
+   "extension_pct": 1.7,
+   "watch_for": null
   }
  ],
  "soft_candidates": [
   {
-   "symbol": "CDNS",
-   "price": 329.26,
-   "days_since_cross": 0,
-   "rvol": 0.85,
-   "avg_volume": 2133000,
-   "avg_volume_fmt": "2.1M",
-   "extension_pct": 0.3,
-   "unchecked": "volume below normal (0.85\u00d7)"
+   "symbol": "NDSN",
+   "price": 324.74,
+   "days_since_cross": 1,
+   "rvol": 0.66,
+   "avg_volume": 232420,
+   "avg_volume_fmt": "232K",
+   "extension_pct": 0.1,
+   "unchecked": "volume below normal (0.66\u00d7)"
+  },
+  {
+   "symbol": "STT",
+   "price": 173.45,
+   "days_since_cross": 1,
+   "rvol": 0.67,
+   "avg_volume": 1369460,
+   "avg_volume_fmt": "1.4M",
+   "extension_pct": 1.1,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.67\u00d7)"
   },
   {
    "symbol": "CF",
-   "price": 123.24,
-   "days_since_cross": 1,
-   "rvol": 0.96,
-   "avg_volume": 2388960,
-   "avg_volume_fmt": "2.4M",
-   "extension_pct": 3.2,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.96\u00d7)"
-  },
-  {
-   "symbol": "PH",
-   "price": 972.9,
-   "days_since_cross": 1,
-   "rvol": 1.48,
-   "avg_volume": 956880,
-   "avg_volume_fmt": "957K",
+   "price": 125.09,
+   "days_since_cross": 3,
+   "rvol": 0.74,
+   "avg_volume": 1770860,
+   "avg_volume_fmt": "1.8M",
    "extension_pct": 3.9,
-   "unchecked": "trend stack not aligned (8 > 21 > 50)"
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.74\u00d7)"
   },
   {
    "symbol": "CFG",
-   "price": 65.38,
-   "days_since_cross": 2,
-   "rvol": 0.83,
-   "avg_volume": 3669880,
-   "avg_volume_fmt": "3.7M",
-   "extension_pct": 1.3,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.83\u00d7)"
+   "price": 64.86,
+   "days_since_cross": 3,
+   "rvol": 0.78,
+   "avg_volume": 3394220,
+   "avg_volume_fmt": "3.4M",
+   "extension_pct": 0.5,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.78\u00d7)"
   },
   {
-   "symbol": "ESS",
-   "price": 274.0,
-   "days_since_cross": 2,
-   "rvol": 0.88,
-   "avg_volume": 493740,
-   "avg_volume_fmt": "494K",
-   "extension_pct": 1.0,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.88\u00d7)"
+   "symbol": "IEX",
+   "price": 237.63,
+   "days_since_cross": 3,
+   "rvol": 0.76,
+   "avg_volume": 538820,
+   "avg_volume_fmt": "539K",
+   "extension_pct": 1.4,
+   "unchecked": "volume below normal (0.76\u00d7)"
   },
   {
    "symbol": "IQV",
-   "price": 274.53,
-   "days_since_cross": 2,
-   "rvol": 0.95,
-   "avg_volume": 1394080,
-   "avg_volume_fmt": "1.4M",
-   "extension_pct": 1.7,
-   "unchecked": "volume below normal (0.95\u00d7)"
+   "price": 271.11,
+   "days_since_cross": 3,
+   "rvol": 0.85,
+   "avg_volume": 1254660,
+   "avg_volume_fmt": "1.3M",
+   "extension_pct": 0.4,
+   "unchecked": "volume below normal (0.85\u00d7)"
   },
   {
-   "symbol": "AMP",
-   "price": 520.06,
-   "days_since_cross": 5,
-   "rvol": 0.84,
-   "avg_volume": 511160,
-   "avg_volume_fmt": "511K",
-   "extension_pct": 3.0,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.84\u00d7)"
+   "symbol": "PH",
+   "price": 955.68,
+   "days_since_cross": 3,
+   "rvol": 0.92,
+   "avg_volume": 588360,
+   "avg_volume_fmt": "588K",
+   "extension_pct": 1.8,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.92\u00d7)"
   },
   {
-   "symbol": "BAX",
-   "price": 26.34,
-   "days_since_cross": 5,
-   "rvol": 0.83,
-   "avg_volume": 5698360,
-   "avg_volume_fmt": "5.7M",
-   "extension_pct": 4.1,
-   "unchecked": "volume below normal (0.83\u00d7)"
-  },
-  {
-   "symbol": "DXCM",
-   "price": 80.35,
-   "days_since_cross": 5,
-   "rvol": 0.89,
-   "avg_volume": 3857620,
-   "avg_volume_fmt": "3.9M",
-   "extension_pct": -2.4,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.89\u00d7)"
-  },
-  {
-   "symbol": "EQIX",
-   "price": 1068.06,
-   "days_since_cross": 5,
-   "rvol": 1.37,
-   "avg_volume": 796580,
-   "avg_volume_fmt": "797K",
-   "extension_pct": 4.7,
-   "unchecked": "trend stack not aligned (8 > 21 > 50)"
-  },
-  {
-   "symbol": "VZ",
-   "price": 46.6,
-   "days_since_cross": 5,
-   "rvol": 0.83,
-   "avg_volume": 20908200,
-   "avg_volume_fmt": "20.9M",
-   "extension_pct": 2.9,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.83\u00d7)"
-  },
-  {
-   "symbol": "DOC",
-   "price": 20.38,
-   "days_since_cross": 6,
-   "rvol": 0.96,
-   "avg_volume": 5607280,
-   "avg_volume_fmt": "5.6M",
-   "extension_pct": 3.6,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.96\u00d7)"
-  },
-  {
-   "symbol": "GE",
-   "price": 342.75,
-   "days_since_cross": 6,
-   "rvol": 0.95,
-   "avg_volume": 4550340,
-   "avg_volume_fmt": "4.6M",
-   "extension_pct": 7.8,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.95\u00d7)"
-  },
-  {
-   "symbol": "VTR",
-   "price": 90.42,
-   "days_since_cross": 6,
+   "symbol": "ESS",
+   "price": 273.32,
+   "days_since_cross": 4,
    "rvol": 0.77,
-   "avg_volume": 2957960,
-   "avg_volume_fmt": "3.0M",
-   "extension_pct": 3.8,
-   "unchecked": "volume below normal (0.77\u00d7)"
+   "avg_volume": 419240,
+   "avg_volume_fmt": "419K",
+   "extension_pct": 0.6,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.77\u00d7)"
+  },
+  {
+   "symbol": "GRMN",
+   "price": 283.03,
+   "days_since_cross": 5,
+   "rvol": 0.72,
+   "avg_volume": 619740,
+   "avg_volume_fmt": "620K",
+   "extension_pct": -0.6,
+   "unchecked": "volume below normal (0.72\u00d7)"
+  },
+  {
+   "symbol": "AMZN",
+   "price": 266.66,
+   "days_since_cross": 6,
+   "rvol": 0.95,
+   "avg_volume": 38802500,
+   "avg_volume_fmt": "38.8M",
+   "extension_pct": 2.9,
+   "unchecked": "volume below normal (0.95\u00d7)"
   }
  ]
 }
