@@ -1,6 +1,6 @@
 {
- "as_of": "2026-11-13",
- "generated_utc": "2026-11-14 01:39 UTC",
+ "as_of": "2026-11-16",
+ "generated_utc": "2026-11-17 04:07 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
@@ -17,153 +17,123 @@
   "incomplete": false
  },
  "counts": {
-  "candidates": 4,
+  "candidates": 1,
   "soft": 10,
-  "watch": 260,
-  "fail": 226
+  "watch": 248,
+  "fail": 241
  },
  "candidates": [
   {
    "symbol": "EOG",
-   "price": 158.32,
-   "days_since_cross": 0,
-   "rvol": 1.2,
-   "avg_volume": 3806380,
-   "avg_volume_fmt": "3.8M",
-   "extension_pct": 3.0,
-   "watch_for": null
-  },
-  {
-   "symbol": "MPWR",
-   "price": 1390.54,
-   "days_since_cross": 3,
-   "rvol": 1.2,
-   "avg_volume": 1072040,
-   "avg_volume_fmt": "1.1M",
-   "extension_pct": 6.5,
-   "watch_for": "already +6.5% above its 21-day average \u2014 don\u2019t chase; wait for a calmer entry"
-  },
-  {
-   "symbol": "SOLV",
-   "price": 88.81,
-   "days_since_cross": 4,
-   "rvol": 1.38,
-   "avg_volume": 1489760,
-   "avg_volume_fmt": "1.5M",
-   "extension_pct": 1.8,
-   "watch_for": null
-  },
-  {
-   "symbol": "XYZ",
-   "price": 82.26,
-   "days_since_cross": 6,
-   "rvol": 1.2,
-   "avg_volume": 5977140,
-   "avg_volume_fmt": "6.0M",
-   "extension_pct": 1.7,
+   "price": 155.47,
+   "days_since_cross": 1,
+   "rvol": 1.04,
+   "avg_volume": 3310860,
+   "avg_volume_fmt": "3.3M",
+   "extension_pct": 1.0,
    "watch_for": null
   }
  ],
  "soft_candidates": [
   {
+   "symbol": "TRGP",
+   "price": 292.12,
+   "days_since_cross": 0,
+   "rvol": 0.88,
+   "avg_volume": 1085360,
+   "avg_volume_fmt": "1.1M",
+   "extension_pct": 0.7,
+   "unchecked": "volume below normal (0.88\u00d7)"
+  },
+  {
+   "symbol": "ANET",
+   "price": 187.02,
+   "days_since_cross": 2,
+   "rvol": 1.28,
+   "avg_volume": 8481100,
+   "avg_volume_fmt": "8.5M",
+   "extension_pct": 0.5,
+   "unchecked": "trend stack not aligned (8 > 21 > 50)"
+  },
+  {
    "symbol": "NDSN",
-   "price": 324.74,
-   "days_since_cross": 1,
-   "rvol": 0.66,
-   "avg_volume": 232420,
-   "avg_volume_fmt": "232K",
-   "extension_pct": 0.1,
-   "unchecked": "volume below normal (0.66\u00d7)"
+   "price": 322.56,
+   "days_since_cross": 2,
+   "rvol": 0.64,
+   "avg_volume": 225560,
+   "avg_volume_fmt": "226K",
+   "extension_pct": -0.5,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.64\u00d7)"
   },
   {
    "symbol": "STT",
-   "price": 173.45,
-   "days_since_cross": 1,
+   "price": 170.03,
+   "days_since_cross": 2,
    "rvol": 0.67,
-   "avg_volume": 1369460,
+   "avg_volume": 1381200,
    "avg_volume_fmt": "1.4M",
-   "extension_pct": 1.1,
+   "extension_pct": -0.8,
    "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.67\u00d7)"
   },
   {
    "symbol": "CF",
-   "price": 125.09,
-   "days_since_cross": 3,
-   "rvol": 0.74,
-   "avg_volume": 1770860,
-   "avg_volume_fmt": "1.8M",
-   "extension_pct": 3.9,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.74\u00d7)"
-  },
-  {
-   "symbol": "CFG",
-   "price": 64.86,
-   "days_since_cross": 3,
-   "rvol": 0.78,
-   "avg_volume": 3394220,
-   "avg_volume_fmt": "3.4M",
-   "extension_pct": 0.5,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.78\u00d7)"
+   "price": 119.85,
+   "days_since_cross": 4,
+   "rvol": 0.72,
+   "avg_volume": 1726080,
+   "avg_volume_fmt": "1.7M",
+   "extension_pct": 0.0,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.72\u00d7)"
   },
   {
    "symbol": "IEX",
-   "price": 237.63,
-   "days_since_cross": 3,
-   "rvol": 0.76,
-   "avg_volume": 538820,
-   "avg_volume_fmt": "539K",
-   "extension_pct": 1.4,
-   "unchecked": "volume below normal (0.76\u00d7)"
-  },
-  {
-   "symbol": "IQV",
-   "price": 271.11,
-   "days_since_cross": 3,
-   "rvol": 0.85,
-   "avg_volume": 1254660,
-   "avg_volume_fmt": "1.3M",
-   "extension_pct": 0.4,
-   "unchecked": "volume below normal (0.85\u00d7)"
-  },
-  {
-   "symbol": "PH",
-   "price": 955.68,
-   "days_since_cross": 3,
-   "rvol": 0.92,
-   "avg_volume": 588360,
-   "avg_volume_fmt": "588K",
-   "extension_pct": 1.8,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.92\u00d7)"
+   "price": 233.57,
+   "days_since_cross": 4,
+   "rvol": 0.73,
+   "avg_volume": 521480,
+   "avg_volume_fmt": "521K",
+   "extension_pct": -0.3,
+   "unchecked": "volume below normal (0.73\u00d7)"
   },
   {
    "symbol": "ESS",
-   "price": 273.32,
-   "days_since_cross": 4,
-   "rvol": 0.77,
-   "avg_volume": 419240,
-   "avg_volume_fmt": "419K",
+   "price": 273.46,
+   "days_since_cross": 5,
+   "rvol": 0.85,
+   "avg_volume": 471640,
+   "avg_volume_fmt": "472K",
    "extension_pct": 0.6,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.77\u00d7)"
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.85\u00d7)"
+  },
+  {
+   "symbol": "IQV",
+   "price": 264.73,
+   "days_since_cross": 5,
+   "rvol": 0.93,
+   "avg_volume": 1376560,
+   "avg_volume_fmt": "1.4M",
+   "extension_pct": -1.6,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.93\u00d7)"
   },
   {
    "symbol": "GRMN",
-   "price": 283.03,
-   "days_since_cross": 5,
-   "rvol": 0.72,
-   "avg_volume": 619740,
-   "avg_volume_fmt": "620K",
-   "extension_pct": -0.6,
-   "unchecked": "volume below normal (0.72\u00d7)"
+   "price": 279.67,
+   "days_since_cross": 6,
+   "rvol": 0.7,
+   "avg_volume": 597320,
+   "avg_volume_fmt": "597K",
+   "extension_pct": -1.6,
+   "unchecked": "volume below normal (0.70\u00d7)"
   },
   {
-   "symbol": "AMZN",
-   "price": 266.66,
+   "symbol": "SOLV",
+   "price": 88.65,
    "days_since_cross": 6,
-   "rvol": 0.95,
-   "avg_volume": 38802500,
-   "avg_volume_fmt": "38.8M",
-   "extension_pct": 2.9,
-   "unchecked": "volume below normal (0.95\u00d7)"
+   "rvol": 0.87,
+   "avg_volume": 950840,
+   "avg_volume_fmt": "951K",
+   "extension_pct": 1.3,
+   "unchecked": "volume below normal (0.87\u00d7)"
   }
  ]
 }
