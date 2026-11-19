@@ -1,6 +1,6 @@
 {
- "as_of": "2026-11-17",
- "generated_utc": "2026-11-18 03:05 UTC",
+ "as_of": "2026-11-18",
+ "generated_utc": "2026-11-19 02:44 UTC",
  "regime": {
   "symbol": "SPY",
   "ok": true,
@@ -18,111 +18,81 @@
  },
  "counts": {
   "candidates": 0,
-  "soft": 10,
-  "watch": 239,
-  "fail": 251
+  "soft": 7,
+  "watch": 238,
+  "fail": 255
  },
  "candidates": [],
  "soft_candidates": [
   {
    "symbol": "IVZ",
-   "price": 28.94,
-   "days_since_cross": 0,
-   "rvol": 1.27,
-   "avg_volume": 6637760,
-   "avg_volume_fmt": "6.6M",
-   "extension_pct": 1.5,
+   "price": 28.65,
+   "days_since_cross": 1,
+   "rvol": 1.31,
+   "avg_volume": 6929520,
+   "avg_volume_fmt": "6.9M",
+   "extension_pct": 0.5,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
    "symbol": "TRGP",
-   "price": 291.35,
-   "days_since_cross": 1,
+   "price": 290.17,
+   "days_since_cross": 2,
    "rvol": 0.85,
-   "avg_volume": 1056920,
+   "avg_volume": 1053820,
    "avg_volume_fmt": "1.1M",
-   "extension_pct": 0.4,
+   "extension_pct": -0.0,
    "unchecked": "volume below normal (0.85\u00d7)"
   },
   {
    "symbol": "EOG",
-   "price": 154.91,
-   "days_since_cross": 2,
-   "rvol": 0.95,
-   "avg_volume": 3029600,
+   "price": 149.69,
+   "days_since_cross": 3,
+   "rvol": 0.94,
+   "avg_volume": 3031180,
    "avg_volume_fmt": "3.0M",
-   "extension_pct": 0.6,
-   "unchecked": "volume below normal (0.95\u00d7)"
+   "extension_pct": -2.5,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.94\u00d7)"
   },
   {
    "symbol": "ANET",
-   "price": 186.42,
-   "days_since_cross": 3,
-   "rvol": 1.23,
-   "avg_volume": 8208800,
-   "avg_volume_fmt": "8.2M",
-   "extension_pct": 0.2,
+   "price": 193.94,
+   "days_since_cross": 4,
+   "rvol": 1.18,
+   "avg_volume": 7974240,
+   "avg_volume_fmt": "8.0M",
+   "extension_pct": 3.8,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
    "symbol": "NDSN",
-   "price": 319.71,
-   "days_since_cross": 3,
-   "rvol": 0.68,
-   "avg_volume": 239120,
-   "avg_volume_fmt": "239K",
-   "extension_pct": -1.3,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.68\u00d7)"
+   "price": 322.34,
+   "days_since_cross": 4,
+   "rvol": 0.67,
+   "avg_volume": 235480,
+   "avg_volume_fmt": "235K",
+   "extension_pct": -0.4,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.67\u00d7)"
   },
   {
    "symbol": "STT",
-   "price": 167.29,
-   "days_since_cross": 3,
-   "rvol": 0.66,
-   "avg_volume": 1362600,
-   "avg_volume_fmt": "1.4M",
-   "extension_pct": -2.2,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.66\u00d7)"
-  },
-  {
-   "symbol": "CF",
-   "price": 119.34,
-   "days_since_cross": 5,
-   "rvol": 0.61,
-   "avg_volume": 1451360,
-   "avg_volume_fmt": "1.5M",
-   "extension_pct": -0.4,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.61\u00d7)"
+   "price": 165.15,
+   "days_since_cross": 4,
+   "rvol": 0.64,
+   "avg_volume": 1310080,
+   "avg_volume_fmt": "1.3M",
+   "extension_pct": -3.1,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.64\u00d7)"
   },
   {
    "symbol": "IEX",
-   "price": 232.59,
-   "days_since_cross": 5,
-   "rvol": 0.79,
-   "avg_volume": 561240,
-   "avg_volume_fmt": "561K",
-   "extension_pct": -0.7,
-   "unchecked": "volume below normal (0.79\u00d7)"
-  },
-  {
-   "symbol": "ESS",
-   "price": 271.0,
+   "price": 233.14,
    "days_since_cross": 6,
-   "rvol": 0.87,
-   "avg_volume": 480580,
-   "avg_volume_fmt": "481K",
-   "extension_pct": -0.3,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.87\u00d7)"
-  },
-  {
-   "symbol": "IQV",
-   "price": 257.6,
-   "days_since_cross": 6,
-   "rvol": 1.03,
-   "avg_volume": 1532020,
-   "avg_volume_fmt": "1.5M",
-   "extension_pct": -3.9,
-   "unchecked": "trend stack not aligned (8 > 21 > 50)"
+   "rvol": 0.73,
+   "avg_volume": 516540,
+   "avg_volume_fmt": "517K",
+   "extension_pct": -0.4,
+   "unchecked": "volume below normal (0.73\u00d7)"
   }
  ]
 }
