@@ -1,98 +1,89 @@
 {
- "as_of": "2026-11-18",
- "generated_utc": "2026-11-19 02:44 UTC",
+ "as_of": "2026-11-19",
+ "generated_utc": "2026-11-20 02:30 UTC",
  "regime": {
   "symbol": "SPY",
-  "ok": true,
+  "ok": false,
   "slope_pct": 0.4
  },
  "coverage": {
-  "evaluated": 500,
+  "evaluated": 499,
   "universe": 503,
   "skipped": [
    "FDXF",
    "HONA",
+   "SNDK",
    "VYLR"
   ],
   "incomplete": false
  },
  "counts": {
   "candidates": 0,
-  "soft": 7,
-  "watch": 238,
-  "fail": 255
+  "soft": 6,
+  "watch": 219,
+  "fail": 274
  },
  "candidates": [],
  "soft_candidates": [
   {
    "symbol": "IVZ",
-   "price": 28.65,
-   "days_since_cross": 1,
-   "rvol": 1.31,
-   "avg_volume": 6929520,
-   "avg_volume_fmt": "6.9M",
-   "extension_pct": 0.5,
+   "price": 27.77,
+   "days_since_cross": 2,
+   "rvol": 1.25,
+   "avg_volume": 6650600,
+   "avg_volume_fmt": "6.7M",
+   "extension_pct": -2.4,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
    "symbol": "TRGP",
-   "price": 290.17,
-   "days_since_cross": 2,
-   "rvol": 0.85,
-   "avg_volume": 1053820,
-   "avg_volume_fmt": "1.1M",
-   "extension_pct": -0.0,
-   "unchecked": "volume below normal (0.85\u00d7)"
-  },
-  {
-   "symbol": "EOG",
-   "price": 149.69,
+   "price": 285.42,
    "days_since_cross": 3,
-   "rvol": 0.94,
-   "avg_volume": 3031180,
-   "avg_volume_fmt": "3.0M",
-   "extension_pct": -2.5,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.94\u00d7)"
+   "rvol": 0.82,
+   "avg_volume": 1020240,
+   "avg_volume_fmt": "1.0M",
+   "extension_pct": -1.5,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.82\u00d7)"
   },
   {
    "symbol": "ANET",
    "price": 193.94,
    "days_since_cross": 4,
-   "rvol": 1.18,
-   "avg_volume": 7974240,
+   "rvol": 1.19,
+   "avg_volume": 7977500,
    "avg_volume_fmt": "8.0M",
    "extension_pct": 3.8,
    "unchecked": "trend stack not aligned (8 > 21 > 50)"
   },
   {
-   "symbol": "NDSN",
-   "price": 322.34,
+   "symbol": "EOG",
+   "price": 149.49,
    "days_since_cross": 4,
-   "rvol": 0.67,
-   "avg_volume": 235480,
-   "avg_volume_fmt": "235K",
-   "extension_pct": -0.4,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.67\u00d7)"
+   "rvol": 0.97,
+   "avg_volume": 3101040,
+   "avg_volume_fmt": "3.1M",
+   "extension_pct": -2.4,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.97\u00d7)"
+  },
+  {
+   "symbol": "NDSN",
+   "price": 316.81,
+   "days_since_cross": 5,
+   "rvol": 0.7,
+   "avg_volume": 243200,
+   "avg_volume_fmt": "243K",
+   "extension_pct": -1.9,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.70\u00d7)"
   },
   {
    "symbol": "STT",
-   "price": 165.15,
-   "days_since_cross": 4,
-   "rvol": 0.64,
-   "avg_volume": 1310080,
-   "avg_volume_fmt": "1.3M",
-   "extension_pct": -3.1,
-   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.64\u00d7)"
-  },
-  {
-   "symbol": "IEX",
-   "price": 233.14,
-   "days_since_cross": 6,
-   "rvol": 0.73,
-   "avg_volume": 516540,
-   "avg_volume_fmt": "517K",
-   "extension_pct": -0.4,
-   "unchecked": "volume below normal (0.73\u00d7)"
+   "price": 161.23,
+   "days_since_cross": 5,
+   "rvol": 0.68,
+   "avg_volume": 1389700,
+   "avg_volume_fmt": "1.4M",
+   "extension_pct": -5.0,
+   "unchecked": "trend stack not aligned (8 > 21 > 50); volume below normal (0.68\u00d7)"
   }
  ]
 }
